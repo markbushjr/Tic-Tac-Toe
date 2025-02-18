@@ -141,6 +141,22 @@ void testDrawCondition() {
     } // if
 } // testDrawCondition
 
+
+// Function to test resetting the game
+void testResetGame() {
+    TicTacToe game;
+    game.makeMove(0);
+    game.resetGame();
+    if (!game.getGameOver()) 
+    {
+        cout << "testResetGame passed!" << endl;
+    } 
+    else 
+    {
+        cout << "testResetGame failed!" << endl;
+    }
+} // testRestGame
+
 int main() {
     cout << "----------Testing----------" << endl;
     cout << "Starting tests!" << endl;
@@ -152,6 +168,7 @@ int main() {
     testWinningCondition2();
     testWinningCondition3();
     testDrawCondition();
+    testResetGame();
 
     cout << endl;
     cout << "All tests completed!" << endl;
