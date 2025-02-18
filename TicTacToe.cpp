@@ -116,3 +116,9 @@ void TicTacToe::checkWin() {
     }
             
 } // checkwin
+
+// Function to get the value in gameOver
+bool TicTacToe::getGameOver()
+{
+    return gameOver;
+} // getGameOver

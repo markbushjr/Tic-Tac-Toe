@@ -58,6 +58,89 @@ void testValidMove() {
     } // if
 } // testValidMove
 
+// Function to test a row winning condition
+void testWinningCondition1() {
+    TicTacToe game;
+
+    game.makeMove(0);
+    game.makeMove(3);
+    game.makeMove(1);
+    game.makeMove(4);
+    game.makeMove(2);
+    if (game.getGameOver() && game.getCurrentPlayer() == 'O') 
+    {
+        cout << "testWinningCondition1 passed!" << endl;
+    } 
+    else 
+    {
+        cout << "testWinningCondition1 failed!" << endl;
+    } // if
+} // testWinnningCondition1
+
+// Function to test a column winning condition
+void testWinningCondition2() {
+    TicTacToe game;
+
+    game.makeMove(0);
+    game.makeMove(1);
+    game.makeMove(3);
+    game.makeMove(4);
+    game.makeMove(6);
+    if (game.getGameOver() && game.getCurrentPlayer() == 'O') 
+    {
+        cout << "testWinningCondition2 passed!" << endl;
+    } 
+    else 
+    {
+        cout << "testWinningCondition2 failed!" << endl;
+    } // if
+} // testWinningCondition2
+
+// Function to test a diagonal winning condition
+void testWinningCondition3() {
+    TicTacToe game;
+
+    game.makeMove(0);
+    game.makeMove(2);
+    game.makeMove(1);
+    game.makeMove(4);
+    game.makeMove(3);
+    game.makeMove(6);
+    if (game.getGameOver() && game.getCurrentPlayer() == 'X') 
+    {
+        cout << "testWinningCondition3 passed!" << endl;
+    } 
+    else 
+    {
+        cout << "testWinningCondition3 failed!" << endl;
+    } // if
+} // testWinningCondition3
+
+// Function to test draw condition
+void testDrawCondition() {
+    TicTacToe game;
+
+    
+    game.makeMove(0);
+    game.makeMove(1);
+    game.makeMove(2);
+    game.makeMove(3);
+    game.makeMove(5);
+    game.makeMove(4);
+    game.makeMove(6);
+    game.makeMove(8);
+    game.makeMove(7);
+    
+    if (game.getGameOver()) 
+    {
+        cout << "testDrawCondition passed!" << endl;
+    } 
+    else 
+    {
+        cout << "testDrawCondition failed!" << endl;
+    } // if
+} // testDrawCondition
+
 int main() {
     cout << "----------Testing----------" << endl;
     cout << "Starting tests!" << endl;
@@ -65,6 +148,10 @@ int main() {
 
     testSwitchPlayer();
     testValidMove();
+    testWinningCondition1();
+    testWinningCondition2();
+    testWinningCondition3();
+    testDrawCondition();
 
     cout << endl;
     cout << "All tests completed!" << endl;
