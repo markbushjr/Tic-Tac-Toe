@@ -7,6 +7,7 @@ class TicTacToe
     char board[9];
     char currentPlayer;
     int numberOfMoves;
+    bool gameOver;
     bool won;
     bool xWins;
     bool oWins;
