@@ -38,3 +38,23 @@ void TicTacToe::displayBoard()
     cout << " " << board[6] << " | " << board[7] << " | " << board[8] << " " << endl;
     cout << endl;
 } // displayBoard
+
+// Function to get the current player
+char TicTacToe::getCurrentPlayer()
+{
+    return currentPlayer;
+} // getCurrentPlayer
+
+
+// Function to switch to the next player
+void TicTacToe::switchPlayer() 
+{
+    if (currentPlayer == 'X')
+    {
+        currentPlayer = 'O';
+    }
+    else
+    {
+        currentPlayer = 'X';
+    } // if
+} // switchPlayer
