@@ -122,3 +122,45 @@ bool TicTacToe::getGameOver()
 {
     return gameOver;
 } // getGameOver
+
+// Function to display game results
+void TicTacToe::result() {
+    if (won) 
+    {
+        switchPlayer();
+        if (getCurrentPlayer() == 'X') 
+        {
+            xWins++;
+        }
+        else 
+        {
+            oWins++;
+        } // if
+
+        cout << "Player " << getCurrentPlayer() << " won the game!" << endl;
+    } 
+    else
+    {
+        cout << "The game ended in a draw!" << endl;
+    } // if
+} // results
+
+// Function to reset the game for a rematch
+void TicTacToe::resetGame()
+{
+    for (int i = 0; i < 9; i++) {
+        board[i] = ' ';
+    } // for
+
+    currentPlayer = 'X';
+    won = false;
+    gameOver = false;
+    numberOfMoves = 0;
+} // resetGame
+
+// Function to display the score of both players
+void TicTacToe::displayScore() {
+    cout << "Score: " << endl;
+    cout << "Player X: " << xWins << " wins" << endl;
+    cout << "Player O: " << oWins << " wins" << endl;
+} // displayScore
