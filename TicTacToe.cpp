@@ -130,11 +130,11 @@ void TicTacToe::result() {
         switchPlayer();
         if (getCurrentPlayer() == 'X') 
         {
-            xWins++;
+            xWins = xWins + 1;
         }
         else 
         {
-            oWins++;
+            oWins = oWins + 1;
         } // if
 
         cout << "Player " << getCurrentPlayer() << " won the game!" << endl;
