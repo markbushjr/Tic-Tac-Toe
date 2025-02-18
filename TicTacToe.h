@@ -9,8 +9,8 @@ class TicTacToe
     int numberOfMoves;
     bool gameOver;
     bool won;
-    bool xWins;
-    bool oWins;
+    int xWins;
+    int oWins;
 
     public:
     TicTacToe();
